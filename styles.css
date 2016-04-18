@@ -1,0 +1,12 @@
+body {
+  text-align: center;
+  font-family: "Comic Sans MS";
+}
+
+.todolist {
+  list-style-type: none;
+}
+
+.done-true {
+  font-style: italic;
+}
