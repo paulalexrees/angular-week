@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en" ng-app="toDoApp">
+  <head>
+    <meta charset="utf-8">
+    <title>title</title>
+    <script src="angular.js"></script>
+    <script type="text/javascript" src="app.js"></script>
+    <script type="text/javascript" src="controllers.js"></script>
+  </head>
+
+  <body>
+    <div ng-controller="ToDoController as ctrl">
+      <p ng-repeat="todo in ctrl.todos">
+        {{ todo.text }}: {{ todo.completed ? "completed" : "not completed" }}
+      </p>
+      <input type="text" ng-model="thingToDo">
+      <button ng-click="ctrl.addToDo(thingToDo);">Add a ToDo</button>
+      <button ng-click="ctrl.removeToDo();">Remove last todo item</button>
+    </div>
+  </body>
+</html>
