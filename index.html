@@ -12,10 +12,10 @@
     <div ng-controller="ToDoController as ctrl">
       <p ng-repeat="todo in ctrl.todos">
         {{ todo.text }}: {{ todo.completed ? "completed" : "not completed" }}
+        <button ng-click="ctrl.removeToDo(todo);">Delete</button>
       </p>
       <input type="text" ng-model="thingToDo">
       <button ng-click="ctrl.addToDo(thingToDo);">Add a ToDo</button>
-      <button ng-click="ctrl.removeToDo();">Remove last todo item</button>
     </div>
   </body>
 </html>

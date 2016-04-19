@@ -7,10 +7,10 @@ toDoApp.controller('ToDoController', function() {
     self.todos.push({text: thingToDo, completed: false});
   };
 
-  self.removeToDo = function() {
-    self.todos.pop();
-  };
+  self.removeToDo = function(thingToDo) {
+    var i = self.todos.indexOf(thingToDo);
+    if(i != -1){
+      self.todos.splice(i,1);
+  }
+};
 });
-
-
-// var object = { text: "Hello World!", completed: false };
