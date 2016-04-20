@@ -4,6 +4,7 @@ toDoApp.controller('ToDoController', function($scope, $timeout) {
   var gunslinger = false;
   var st = new Stopwatch();
   var myVar = null;
+  var myValue = true;
 
   self.todos = [
     {text: "Get rich", completed:true},
@@ -54,6 +55,10 @@ toDoApp.controller('ToDoController', function($scope, $timeout) {
     clearTimeout(myVar);
     st.stop();
     alert("You win in: " + st.getSeconds() + " seconds!");
+  };
+
+  self.toggleDiv = function() {
+    myValue = false;
   };
 
 
